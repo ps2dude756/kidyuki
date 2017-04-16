@@ -1,0 +1,46 @@
+{
+  "name": "kidyuki",
+  "version": "1.0.0",
+  "description": "www.kidyuki.com",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --optimize-minimize --config webpack.config.js && cp -r ./statics ./build",
+    "clean": "rm -rf ./build",
+    "clean-all": "rm -rf ./node_modules && npm run clean",
+    "flow": "flow status",
+    "lint": "eslint --fix src/",
+    "start": "node ./app.js",
+    "test": "jest --config=.jestconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ps2dude756/kidyuki2.git"
+  },
+  "author": "andrewroth1991@gmail.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ps2dude756/kidyuki2/issues"
+  },
+  "homepage": "https://github.com/ps2dude756/kidyuki2#readme",
+  "private": true,
+  "dependencies": {
+    "express": "^4.15.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.2",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.2.2",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.23.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-flowtype": "^2.30.4",
+    "eslint-plugin-react": "^6.10.3",
+    "flow-bin": "^0.42.0",
+    "jest": "^19.0.2",
+    "webpack": "^2.3.2"
+  }
+}
