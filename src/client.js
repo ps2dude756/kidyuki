@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
+import Home from './components/Home.js';
 
 render(
-        <div>Test React</div>,
+        <Home/>,
         document.getElementById('content')
 );
