@@ -1,44 +1,14 @@
 import React, { Component, Element } from 'react';
+import Footer from './Footer.js';
+import NavMenu from './NavMenu.js';
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            toggled: false
-        };
-    }
-
-    _onHamburgerClick() {
-        this.setState({toggled: !this.state.toggled});
-    }
-
     render(): Element {
         return (
                 <div>
-                    <div className={`hamburger-container${this.state.toggled ? ' toggled' : ''}`} onClick={this._onHamburgerClick.bind(this)}>
-                        <div className="bar1"/>
-                        <div className="bar2"/>
-                        <div className="bar3"/>
-                    </div>
-                    <div className={`menu-container${this.state.toggled ? '' : ' hidden'}`}>
-                        <ul className="menu">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="https://docs.google.com/spreadsheets/d/1AL56TrMR43UKL50SHjPk02B-OHVGnGDZ18_24XNSymo/htmlview#gid=0">Request List</a></li>
-                            <li><a href="/tours">Tours</a></li>
-                            <li>About
-                                <ul className="submenu">
-                                    <li><a href="/about/KidYuki">Kid Yuki</a></li>
-                                    <li><a href="/about/Amaya">Amaya</a></li>
-                                    <li><a href="/about/David">David</a></li>
-                                    <li><a href="/about/Kyle">Kyle</a></li>
-                                    <li><a href="/about/Andre">Andre</a></li>
-                                    <li><a href="/about/Deja">{'Dej\'a'}</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                    <NavMenu/>
                     <div>
-                        <img className="banner-image" src="./homepage_banner.jpg"/>
+                        <img className="homepage-banner" src="./homepage_banner.jpg"/>
                     </div>
                     <div className="pinned-item">
                         <div>Next Kid Yuki show:</div>
@@ -69,7 +39,7 @@ class Home extends Component {
                             </blockquote>
                         </div>
                     </div>
-                    <div className="footer">Kid Yuki &copy; 2017</div>
+                    <Footer/>
                 </div>
         );
     }
