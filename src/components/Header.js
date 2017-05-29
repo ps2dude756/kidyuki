@@ -8,7 +8,7 @@ class Header extends Component {
                 <div>
                     <NavMenu/>
                     <div className="banner-container">
-                        {/*<img className="banner" src="/banner_transparent.png"/>*/}
+                        <img className="banner" src="/banner_transparent.png"/>
                     </div>
                 </div>
         );
