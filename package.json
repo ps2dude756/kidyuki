@@ -8,6 +8,7 @@
     "clean": "rm -rf ./build",
     "clean-all": "rm -rf ./node_modules && npm run clean",
     "flow": "flow status",
+    "heroku-postbuild": "npm run build",
     "lint": "eslint --fix src/",
     "start": "node ./app.js",
     "test": "jest --config=.jestconfig.json"
