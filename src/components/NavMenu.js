@@ -28,12 +28,12 @@ class NavMenu extends Component {
                             <li><Link to="/tours">Tours</Link></li>
                             <li>About
                                 <ul className="submenu">
-                                    <li><Link to="/about/KidYuki">Kid Yuki</Link></li>
-                                    <li><Link to="/about/Amaya">Amaya</Link></li>
-                                    <li><Link to="/about/David">David</Link></li>
-                                    <li><Link to="/about/Kyle">Kyle</Link></li>
-                                    <li><Link to="/about/Andre">Andre</Link></li>
-                                    <li><Link to="/about/Deja">{'Dej\'a'}</Link></li>
+                                    <li><Link to="/about/kid_yuki">Kid Yuki</Link></li>
+                                    <li><Link to="/about/amaya">Amaya</Link></li>
+                                    <li><Link to="/about/david">David</Link></li>
+                                    <li><Link to="/about/kyle">Kyle</Link></li>
+                                    <li><Link to="/about/andre">Andre</Link></li>
+                                    <li><Link to="/about/deja">Dej'a</Link></li>
                                 </ul>
                             </li>
                         </ul>

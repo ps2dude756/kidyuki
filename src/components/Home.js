@@ -8,7 +8,7 @@ class Home extends Component {
                 <div>
                     <NavMenu/>
                     <div>
-                        <img className="homepage-banner" src="./homepage_banner.jpg"/>
+                        <img className="homepage-banner" src="/homepage_banner.jpg"/>
                     </div>
                     <div className="pinned-item">
                         <div>Next Kid Yuki show:</div>
