@@ -14,10 +14,10 @@ class Home extends Component {
                         <div>Next Kid Yuki show:</div>
                         <div><a href="#">Colossal Con, June 1 - 4 Sandusky, OH</a></div>
                     </div>
-                    {*<div className="pinned-item">
+                    {/*<div className="pinned-item">
                         <div>Next Kid Yuki livestream:</div>
                         <div><a href="#">Tuesday, April 17 at 9pm CST</a></div>
-                    </div>*}
+                    </div>*/}
                     <div className="fb-page-container">
                         <div
                             className="fb-page"
