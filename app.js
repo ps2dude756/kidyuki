@@ -15,8 +15,12 @@ const routes = [
     '/about/andre',
     '/about/deja'
 ];
-app.get(new RegExp(routes.join('|')), function(request, response) {
+app.get(new RegExp('^' + routes.join('$|^') + '$'), function(request, response) {
     response.sendFile(__dirname + '/build/statics/index.html');
+});
+
+app.get('/requests', function(request, response) {
+    response.redirect('https://docs.google.com/spreadsheets/d/1AL56TrMR43UKL50SHjPk02B-OHVGnGDZ18_24XNSymo/htmlview#gid=0');
 });
 
 app.listen(app.get('port'));
