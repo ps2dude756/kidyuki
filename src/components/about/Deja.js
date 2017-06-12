@@ -1,13 +1,10 @@
 import React, { Component, Element } from 'react';
-import Header from '../Header.js';
-import Footer from '../Footer.js';
 
 class Deja extends Component {
     render(): Element {
         return (
                 <div>
-                    <Header/>
-                    <div className="container">
+                    <div className="about-container">
                         <h1>Dej'a</h1>
                         <div className="profile-pic-container">
                             <img className="profile-pic" src="/deja.jpg"/>
@@ -29,7 +26,6 @@ class Deja extends Component {
                             </p>
                         </div>
                     </div>
-                    <Footer/>
                 </div>
         );
     }

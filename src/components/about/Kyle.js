@@ -1,13 +1,10 @@
 import React, { Component, Element } from 'react';
-import Header from '../Header.js';
-import Footer from '../Footer.js';
 
 class Kyle extends Component {
     render(): Element {
         return (
                 <div>
-                    <Header/>
-                    <div className="container">
+                    <div className="about-container">
                         <h1>Kyle</h1>
                         <div className="profile-pic-container">
                             <img className="profile-pic" src="/kyle.jpg"/>
@@ -44,7 +41,6 @@ class Kyle extends Component {
                             </p>
                         </div>
                     </div>
-                    <Footer/>
                 </div>
         );
     }

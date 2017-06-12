@@ -13,6 +13,12 @@ class NavMenu extends Component {
         this.setState({toggled: !this.state.toggled});
     }
 
+    _renderLink(href, text): Element {
+        return (
+                <li onClick={this._onHamburgerClick.bind(this)}><Link to={href}>{text}</Link></li>
+        );
+    }
+
     render(): Element {
         return (
                 <div>
@@ -23,17 +29,17 @@ class NavMenu extends Component {
                     </div>
                     <div className={`menu-container${this.state.toggled ? '' : ' hidden'}`}>
                         <ul className="menu">
-                            <li><Link to="/">Home</Link></li>
-                            <li><a href="https://docs.google.com/spreadsheets/d/1AL56TrMR43UKL50SHjPk02B-OHVGnGDZ18_24XNSymo/htmlview#gid=0">Request List</a></li>
-                            <li><Link to="/tours">Tours</Link></li>
+                            {this._renderLink('/', 'Home')}
+                            <li onClick={this._onHamburgerClick.bind(this)}><a href="https://docs.google.com/spreadsheets/d/1AL56TrMR43UKL50SHjPk02B-OHVGnGDZ18_24XNSymo/htmlview#gid=0">Request List</a></li>
+                            {this._renderLink('/tours', 'Tours')}
                             <li>About
                                 <ul className="submenu">
-                                    <li><Link to="/about/kid_yuki">Kid Yuki</Link></li>
-                                    <li><Link to="/about/amaya">Amaya</Link></li>
-                                    <li><Link to="/about/david">David</Link></li>
-                                    <li><Link to="/about/kyle">Kyle</Link></li>
-                                    <li><Link to="/about/andre">Andre</Link></li>
-                                    <li><Link to="/about/deja">Dej'a</Link></li>
+                                    {this._renderLink('/about/kid_yuki', 'Kid Yuki')}
+                                    {this._renderLink('/about/amaya', 'Amaya')}
+                                    {this._renderLink('/about/david', 'David')}
+                                    {this._renderLink('/about/kyle', 'Kyle')}
+                                    {this._renderLink('/about/andre', 'Andre')}
+                                    {this._renderLink('/about/deja', 'Dej\'a')}
                                 </ul>
                             </li>
                         </ul>

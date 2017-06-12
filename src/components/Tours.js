@@ -1,12 +1,9 @@
 import React, { Component, Element } from 'react';
-import Footer from './Footer.js';
-import Header from './Header.js';
 
 class Tours extends Component {
     render(): Element {
         return (
                 <div>
-                    <Header/>
                     <h1 className="page-header">Tours</h1>
                     <table className="tours-table">
                         <thead>
@@ -58,7 +55,6 @@ class Tours extends Component {
                             </tr>
                         </tbody>
                     </table>
-                    <Footer/>
                 </div>
         );
     }

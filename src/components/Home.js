@@ -1,15 +1,9 @@
 import React, { Component, Element } from 'react';
-import Footer from './Footer.js';
-import NavMenu from './NavMenu.js';
 
 class Home extends Component {
     render(): Element {
         return (
                 <div>
-                    <NavMenu/>
-                    <div>
-                        <img className="homepage-banner" src="/homepage_banner.jpg"/>
-                    </div>
                     <div className="pinned-item">
                         <div>Next Kid Yuki show:</div>
                         <div><a href="#">Colossal Con, June 1 - 4 Sandusky, OH</a></div>
@@ -33,13 +27,10 @@ class Home extends Component {
                                 cite="https://www.facebook.com/kidyuki1/" 
                                 className="fb-xfbml-parse-ignore"
                             >
-                                <a href="https://www.facebook.com/kidyuki1/">
-                                    Kid Yuki and The Otakus
-                                </a>
+                                <a href="https://www.facebook.com/kidyuki1/">Kid Yuki and The Otakus Facebook page</a> failed to load. Refresh to try again.
                             </blockquote>
                         </div>
                     </div>
-                    <Footer/>
                 </div>
         );
     }

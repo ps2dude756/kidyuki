@@ -5,6 +5,10 @@ body {
     position: relative;
 }
 
+.container {
+    min-height: calc(100% - 100px);
+}
+
 .homepage-banner {
     max-width: 100%;
 }
@@ -28,7 +32,7 @@ body {
     width: 100%;
 }
 
-.container {
+.about-container {
     margin-left: 25px;
     margin-right: 25px;
 }
