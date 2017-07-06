@@ -23,4 +23,8 @@ app.get('/requests', function(request, response) {
     response.redirect('https://docs.google.com/spreadsheets/d/1AL56TrMR43UKL50SHjPk02B-OHVGnGDZ18_24XNSymo/htmlview#gid=0');
 });
 
+app.get(new RegExp('^/live$|^/livestream$'), function(request, response) {
+    response.redirect('https://www.youtube.com/c/kidyuki1/live');
+});
+
 app.listen(app.get('port'));
