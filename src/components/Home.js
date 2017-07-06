@@ -6,7 +6,7 @@ class Home extends Component {
                 <div>
                     <div className="pinned-item">
                         <div>Next Kid Yuki show:</div>
-                        <div><a href="#">Colossal Con, June 1 - 4 Sandusky, OH</a></div>
+                        <div><a href="https://www.animemidwest.com">Anime Midwest, July 7 - 9, Rosemont, IL</a></div>
                     </div>
                     {/*<div className="pinned-item">
                         <div>Next Kid Yuki livestream:</div>
