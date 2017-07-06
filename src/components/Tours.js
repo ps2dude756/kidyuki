@@ -17,7 +17,7 @@ class Tours extends Component {
                                 <td className="tours-cell">Sept. 15-17, 2017</td>
                                 <td className="tours-cell">Ramencon</td>
                             </tr>
-                            <tr className="tours-cell">
+                            <tr className="tours-row">
                                 <td className="tours-cell">July 14-17, 2017</td>
                                 <td className="tours-cell">Anime-Zing (acoustic only)</td>
                             </tr>
