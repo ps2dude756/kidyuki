@@ -1,64 +1,31 @@
 import React, { Component, Element } from 'react';
+import ToursTable from './ToursTable.js';
 
 class Tours extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            acoustic_shows: [],
+            electric_shows: []
+        };
+    }
+
+    componentDidMount() {
+        fetch('/api/get_shows').then((res) => res.json()).then((res) => {
+            this.setState(res);
+        });
+    }
+
     render(): Element {
         return (
                 <div>
                     <h1 className="page-header">Tours</h1>
-                    <table className="tours-table">
-                        <thead>
-                            <tr className="tours-row">
-                                <th className="tours-cell">Date</th>
-                                <th className="tours-cell">Convention</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className="tours-row">
-                                <td className="tours-cell">Sept. 15-17, 2017</td>
-                                <td className="tours-cell">Ramencon</td>
-                            </tr>
-                            <tr className="tours-row">
-                                <td className="tours-cell">July 14-17, 2017</td>
-                                <td className="tours-cell">Anime-Zing (acoustic only)</td>
-                            </tr>
-                            <tr className="tours-row">
-                                <td className="tours-cell">July 7-9, 2017</td>
-                                <td className="tours-cell">Anime Midwest</td>
-                            </tr>
-                            <tr className="tours-row">
-                                <td className="tours-cell">June 1-4, 2017</td>
-                                <td className="tours-cell">Colossal Con</td>
-                            </tr>
-                            <tr className="tours-row">
-                                <td className="tours-cell">Feb. 4, 2017</td>
-                                <td className="tours-cell">UChi-Con</td>
-                            </tr>
-                            <tr className="tours-row">
-                                <td className="tours-cell">Jan. 6-8, 2017</td>
-                                <td className="tours-cell">Anime-Zap!</td>
-                            </tr>
-                            <tr className="tours-row">
-                                <td className="tours-cell">Dec. 16-18, 2016</td>
-                                <td className="tours-cell">Con Alt Delete</td>
-                            </tr>
-                            <tr className="tours-row">
-                                <td className="tours-cell">July 8-10, 2016</td>
-                                <td className="tours-cell">Anime Midwest</td>
-                            </tr>
-                            <tr className="tours-row">
-                                <td className="tours-cell">June 17-18, 2016</td>
-                                <td className="tours-cell">SoyCon</td>
-                            </tr>
-                            <tr className="tours-row">
-                                <td className="tours-cell">Jan. 30, 2016</td>
-                                <td className="tours-cell">UChi-Con</td>
-                            </tr>
-                            <tr className="tours-row">
-                                <td className="tours-cell">July 3-5, 2015</td>
-                                <td className="tours-cell">Anime Midwest</td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                    <h2 className="page-header">Electric Shows</h2>
+                    <ToursTable shows={this.state.electric_shows}/>
+
+                    <h2 className="page-header">Acoustic Shows</h2>
+                    <ToursTable shows={this.state.acoustic_shows}/>
                 </div>
         );
     }

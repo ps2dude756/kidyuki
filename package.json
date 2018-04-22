@@ -7,11 +7,12 @@
     "build": "webpack --optimize-minimize --config webpack.config.js && cp -r ./statics ./build",
     "clean": "rm -rf ./build",
     "clean-all": "rm -rf ./node_modules && npm run clean",
+    "db": "psql \"postgres://$(whoami)@localhost/kidyuki\"",
     "flow": "flow status",
     "heroku-prebuild": "npm run clean-all",
     "heroku-postbuild": "npm install --dev && npm run build",
     "lint": "eslint --fix src/",
-    "start": "node ./app.js",
+    "start": "export DATABASE_URL=postgres://$(whoami)@localhost/kidyuki; node ./app.js",
     "test": "jest --config=.jestconfig.json"
   },
   "repository": {
@@ -27,6 +28,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.15.2",
+    "pg": "^7.4.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router-dom": "^4.1.1"
