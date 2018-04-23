@@ -55,11 +55,11 @@ app.get(new RegExp('^/api/get_shows$'), function(request, response) {
             }
 
             var acoustic_shows = [];
-            for (var i = 0; i < res.rows.length; ++i) {
+            for (var i = 0; i < res2.rows.length; ++i) {
                 acoustic_shows.push({
-                    'start_timestamp': res.rows[i]['start_timestamp'],
-                    'end_timestamp': res.rows[i]['end_timestamp'],
-                    'convention': res.rows[i]['convention']
+                    'start_timestamp': res2.rows[i]['start_timestamp'],
+                    'end_timestamp': res2.rows[i]['end_timestamp'],
+                    'convention': res2.rows[i]['convention']
                 });
             }
 
