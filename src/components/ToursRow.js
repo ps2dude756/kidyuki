@@ -20,11 +20,11 @@ class ToursRow extends Component {
         let dateString = '';
         if (this.props.tour.start_timestamp === this.props.tour.end_timestamp) {
             const date = new Date(this.props.tour.start_timestamp * 1000);
-            dateString = `${MONTHS[date.getMonth()]} ${date.getDate()}, ${date.getYear()}`;
+            dateString = `${MONTHS[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
         } else {
             const startDate = new Date(this.props.tour.start_timestamp * 1000);
             const endDate = new Date(this.props.tour.end_timestamp * 1000);
-            dateString = `${MONTHS[startDate.getMonth()]} ${startDate.getDate()}-${endDate.getDate()}, ${startDate.getYear()}`;
+            dateString = `${MONTHS[startDate.getMonth()]} ${startDate.getDate()}-${endDate.getDate()}, ${startDate.getFullYear()}`;
         }
 
         return (
